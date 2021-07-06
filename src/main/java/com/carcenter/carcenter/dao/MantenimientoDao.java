@@ -1,0 +1,13 @@
+package com.carcenter.carcenter.dao;
+
+import com.carcenter.carcenter.entity.MantenimientoEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface MantenimientoDao extends JpaRepository<MantenimientoEntity, Integer> {
+
+    Optional<MantenimientoEntity> findByCodigo(Integer codigo);
+}
